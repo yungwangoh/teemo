@@ -1,0 +1,25 @@
+spring:
+  datasource:
+    hikari:
+      jdbc-url:
+
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        format_sql: true
+        jdbc:
+          batch_size: 1000
+        auto_quote_keyword: true
+        show_sql: true
+    #        order_inserts: true
+    #        order_updates: true
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    defer-datasource-initialization: true
